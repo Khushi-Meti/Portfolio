@@ -24,10 +24,11 @@ export default {
       animation: {
         'bounce-slow': 'bounce 3s infinite',
         'blob': 'blob 7s infinite',
+        'blob-slow': 'blob 20s infinite ease-in-out', // 👈 added slower version
       },
       transitionProperty: {
-        'height': 'height',
-        'spacing': 'margin, padding',
+        height: 'height',
+        spacing: 'margin, padding',
       },
       keyframes: {
         blob: {
@@ -35,10 +36,10 @@ export default {
             transform: 'translate(0px, 0px) scale(1)',
           },
           '33%': {
-            transform: 'translate(30px, -50px) scale(1.1)',
+            transform: 'translate(40px, -60px) scale(1.05)',
           },
           '66%': {
-            transform: 'translate(-20px, 20px) scale(0.9)',
+            transform: 'translate(-30px, 30px) scale(0.95)',
           },
           '100%': {
             transform: 'translate(0px, 0px) scale(1)',
