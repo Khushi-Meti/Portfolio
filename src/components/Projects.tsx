@@ -20,7 +20,7 @@ const projects: Project[] = [
     date: '2025',
     technologies: ['Java', 'Spring Boot', 'WebSocket', 'STOMP', 'SockJS', 'HTML', 'Bootstrap'],
     demoLink: '#',
-    repoLink: '#'
+    repoLink: 'https://github.com/Khushi-Meti/chat-App'
   },
   {
     id: 'book-recommendation',
@@ -29,7 +29,7 @@ const projects: Project[] = [
     date: 'Nov 2024',
     technologies: ['TensorFlow', 'OpenAI API', 'Streamlit', 'Collaborative Filtering', 'Matplotlib', 'Seaborn'],
     demoLink: '#',
-    repoLink: '#'
+    repoLink: 'https://github.com/Khushi-Meti/Book-recommendation-System'
   },
   {
     id: 'movie-recommendation',
@@ -38,7 +38,7 @@ const projects: Project[] = [
     date: 'Sep 2024',
     technologies: ['Python', 'Scikit-learn', 'Streamlit', 'TMDB API', 'Pandas', 'NumPy'],
     demoLink: '#',
-    repoLink: '#'
+    repoLink: 'https://github.com/Khushi-Meti/Movie-Recommendation-System'
   },
   {
     id: 'sports-classification',
@@ -47,7 +47,7 @@ const projects: Project[] = [
     date: 'Aug 2024',
     technologies: ['Python', 'TensorFlow', 'OpenCV', 'SVM', 'Flask', 'Matplotlib'],
     demoLink: '#',
-    repoLink: '#'
+    repoLink: 'https://github.com/Khushi-Meti/Sports-Image-Classification'
   },
   {
     id: 'house-price',
@@ -56,7 +56,7 @@ const projects: Project[] = [
     date: 'Aug 2024',
     technologies: ['Python', 'Scikit-learn', 'Flask', 'Pandas', 'NumPy'],
     demoLink: '#',
-    repoLink: '#'
+    repoLink: 'https://github.com/Khushi-Meti'
   },
   {
     id: 'todo-app',
@@ -65,7 +65,7 @@ const projects: Project[] = [
     date: 'Apr 2025',
     technologies: ['Spring Boot', 'Thymeleaf', 'MySQL', 'JPA', 'Bootstrap', 'Lombok'],
     demoLink: '#',
-    repoLink: '#'
+    repoLink: 'https://github.com/Khushi-Meti/todo_app'
   },
   {
     id: 'linkedin-scraper',
@@ -74,7 +74,7 @@ const projects: Project[] = [
     date: 'Feb 2025 - Present',
     technologies: ['Python', 'Selenium', 'BeautifulSoup', 'Pandas'],
     demoLink: '#',
-    repoLink: '#'
+    repoLink: 'https://github.com/Khushi-Meti'
   },
   {
     id: 'potato-disease',
@@ -83,7 +83,7 @@ const projects: Project[] = [
     date: 'Jul 2024',
     technologies: ['Python', 'TensorFlow', 'Keras'],
     demoLink: '#',
-    repoLink: '#'
+    repoLink: 'https://github.com/Khushi-Meti/Potato-Disease-Classification'
   }
 ];
 
