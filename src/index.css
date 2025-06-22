@@ -24,19 +24,19 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-all duration-300;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 backdrop-blur-sm;
   }
   
   .btn-primary {
-    @apply bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transform hover:scale-105;
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transform hover:scale-105 shadow-lg hover:shadow-xl;
   }
   
   .btn-secondary {
-    @apply bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm hover:bg-white/60 dark:hover:bg-gray-700/60 text-gray-900 dark:text-gray-100 transform hover:scale-105;
+    @apply bg-white/60 dark:bg-gray-800/60 hover:bg-white/80 dark:hover:bg-gray-700/80 text-gray-900 dark:text-gray-100 transform hover:scale-105 shadow-lg hover:shadow-xl;
   }
 
   .card {
-    @apply bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02];
+    @apply bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] border border-white/20 dark:border-gray-700/20;
   }
 }
 
@@ -113,4 +113,38 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* Scroll reveal animations */
+.scroll-reveal {
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1 !important;
+  transform: translate(0) scale(1) !important;
+}
+
+/* Enhanced card hover effects */
+.card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }

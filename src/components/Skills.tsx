@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionHeading from './common/SectionHeading';
+import ScrollReveal from '../utils/ScrollReveal';
 
 interface SkillCategory {
   name: string;
@@ -49,12 +50,12 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({ name, level }) =>
     <div className="mb-4">
       <div className="flex justify-between mb-1">
         <span className="text-gray-700 dark:text-gray-300">{name}</span>
-        <span className="text-blue-600 dark:text-blue-400 font-medium">{level * 20}%</span>
+        <span className="text-blue-600 dark:text-blue-400 font-medium">{level === 5 ? 95 : level * 20}%</span>
       </div>
       <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
         <div 
           className="h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full skill-bar"
-          style={{ width: `${level * 20}%` }}
+          style={{ width: `${level === 5 ? 95 : level * 20}%` }}
         ></div>
       </div>
     </div>
@@ -63,24 +64,35 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({ name, level }) =>
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-      <div className="container mx-auto px-4">
-        <SectionHeading title="Skills & Expertise" subtitle="What I Can Do" />
+    <section id="skills" className="py-20 relative overflow-hidden">
+      {/* Gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-pink-50 to-blue-50 dark:from-gray-900 dark:to-blue-900/30"></div>
+      
+      {/* Animated background patterns */}
+      <div className="absolute inset-0 overflow-hidden opacity-10">
+        <div className="absolute top-20 right-10 w-80 h-80 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <ScrollReveal>
+          <SectionHeading title="Skills & Expertise" subtitle="What I Can Do" />
+        </ScrollReveal>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {skillCategories.map((category, idx) => (
-            <div 
-              key={idx} 
-              className="card p-6"
-            >
-              <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                {category.name}
-              </h3>
-              
-              {category.skills.map((skill, skillIdx) => (
-                <SkillBar key={skillIdx} name={skill.name} level={skill.level} />
-              ))}
-            </div>
+            <ScrollReveal key={idx} delay={200 * (idx + 1)}>
+              <div className="card p-6">
+                <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  {category.name}
+                </h3>
+                
+                {category.skills.map((skill, skillIdx) => (
+                  <SkillBar key={skillIdx} name={skill.name} level={skill.level} />
+                ))}
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

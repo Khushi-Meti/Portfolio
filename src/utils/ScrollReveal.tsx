@@ -51,46 +51,42 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   }, [delay, threshold]);
   
   // Define transform values based on direction
-  let initialTransform = 'translateY(20px)';
+  let initialTransform = 'translateY(30px)';
   switch (direction) {
     case 'up':
-      initialTransform = 'translateY(20px)';
+      initialTransform = 'translateY(30px)';
       break;
     case 'down':
-      initialTransform = 'translateY(-20px)';
+      initialTransform = 'translateY(-30px)';
       break;
     case 'left':
-      initialTransform = 'translateX(20px)';
+      initialTransform = 'translateX(30px)';
       break;
     case 'right':
-      initialTransform = 'translateX(-20px)';
+      initialTransform = 'translateX(-30px)';
       break;
     case 'none':
-      initialTransform = 'none';
+      initialTransform = 'scale(0.9)';
       break;
   }
-  
-  const animationStyle = {
-    opacity: 0,
-    transform: initialTransform,
-    transition: `opacity ${duration}ms ease-out, transform ${duration}ms ease-out`,
-  };
-  
-  const visibleStyle = {
-    opacity: 1,
-    transform: 'translate(0)',
-  };
   
   return (
     <div
       ref={elementRef}
       className={`scroll-reveal ${className}`}
       style={{
-        ...animationStyle,
-        ...(elementRef.current?.classList.contains('is-visible') ? visibleStyle : {}),
+        opacity: 0,
+        transform: initialTransform,
+        transition: `opacity ${duration}ms ease-out, transform ${duration}ms ease-out`,
       }}
     >
       {children}
+      <style jsx>{`
+        .scroll-reveal.is-visible {
+          opacity: 1 !important;
+          transform: translate(0) scale(1) !important;
+        }
+      `}</style>
     </div>
   );
 };
