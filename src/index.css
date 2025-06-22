@@ -8,7 +8,7 @@
   }
   
   body {
-    @apply font-sans antialiased;
+    @apply font-sans antialiased bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-blue-900/30 dark:to-purple-900/30 min-h-screen;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -35,8 +35,24 @@
     @apply bg-white/60 dark:bg-gray-800/60 hover:bg-white/80 dark:hover:bg-gray-700/80 text-gray-900 dark:text-gray-100 transform hover:scale-105 shadow-lg hover:shadow-xl;
   }
 
-  .card {
-    @apply bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] border border-white/20 dark:border-gray-700/20;
+  .glass-card {
+    @apply bg-white/70 dark:bg-gray-800/70 backdrop-blur-md rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] border border-white/30 dark:border-gray-700/30;
+  }
+
+  .btn-gradient-blue {
+    @apply px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-gradient-purple {
+    @apply px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-gradient-pink {
+    @apply px-6 py-3 bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-gradient-indigo {
+    @apply px-6 py-3 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
   }
 }
 
@@ -56,34 +72,6 @@
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-500 dark:bg-gray-500;
-}
-
-/* Animations */
-@keyframes blob {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
 }
 
 /* Skill bar animations */
@@ -126,7 +114,7 @@
 }
 
 /* Enhanced card hover effects */
-.card:hover {
+.glass-card:hover {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 

@@ -45,49 +45,39 @@ const educationData: EducationItem[] = [
 
 const Education: React.FC = () => {
   return (
-    <section id="education" className="py-20 relative overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-pink-50 dark:from-gray-900 dark:to-purple-900/30"></div>
-      
-      {/* Animated background patterns */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute top-20 left-1/4 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-        <div className="absolute bottom-20 right-1/4 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/2 right-10 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
-      </div>
-
+    <section id="education" className="py-20 relative">
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
           <SectionHeading title="Education" subtitle="Academic Journey" />
         </ScrollReveal>
         
         <div className="mt-12 max-w-4xl mx-auto">
-          <div className="space-y-8">
+          <div className="space-y-6">
             {educationData.map((edu, index) => (
               <ScrollReveal key={edu.id} delay={200 * (index + 1)}>
-                <div className="card p-6 hover:shadow-2xl transition-all duration-300">
-                  <div className="flex items-start space-x-4">
-                    <div className={`p-3 rounded-full bg-gradient-to-r ${edu.color} text-white shadow-lg`}>
+                <div className="glass-card p-8 hover:shadow-2xl transition-all duration-300">
+                  <div className="flex items-start space-x-6">
+                    <div className={`p-4 rounded-xl bg-gradient-to-r ${edu.color} text-white shadow-lg`}>
                       {edu.icon}
                     </div>
                     
                     <div className="flex-1">
-                      <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1 md:mb-0">
+                      <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 md:mb-0">
                           {edu.degree}
                         </h3>
-                        <span className="text-sm font-medium px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 rounded-full">
+                        <span className="text-sm font-medium px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 rounded-full border border-blue-200/50 dark:border-blue-700/50">
                           {edu.year}
                         </span>
                       </div>
                       
-                      <p className="text-gray-600 dark:text-gray-400 mb-2 font-medium">
+                      <p className="text-gray-600 dark:text-gray-400 mb-3 font-medium text-lg">
                         {edu.institution}
                       </p>
                       
                       <div className="flex items-center">
-                        <span className="text-sm text-gray-500 dark:text-gray-500 mr-2">Grade:</span>
-                        <span className={`font-bold text-lg bg-gradient-to-r ${edu.color} bg-clip-text text-transparent`}>
+                        <span className="text-sm text-gray-500 dark:text-gray-500 mr-3">Grade:</span>
+                        <span className={`font-bold text-xl bg-gradient-to-r ${edu.color} bg-clip-text text-transparent`}>
                           {edu.grade}
                         </span>
                       </div>

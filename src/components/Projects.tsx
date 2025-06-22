@@ -90,18 +90,18 @@ const projects: Project[] = [
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
-    <div className="card group">
+    <div className="glass-card group">
       <div className="p-6">
         <div className="flex justify-between items-start mb-4">
           <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
             {project.title}
           </h3>
-          <span className="text-sm text-blue-600 dark:text-blue-400 font-medium px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-full">
+          <span className="text-sm text-blue-600 dark:text-blue-400 font-medium px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-full border border-blue-200/50 dark:border-blue-700/50">
             {project.date}
           </span>
         </div>
         
-        <p className="text-gray-700 dark:text-gray-300 mb-6 line-clamp-3">
+        <p className="text-gray-700 dark:text-gray-300 mb-6 line-clamp-3 leading-relaxed">
           {project.description}
         </p>
         
@@ -109,7 +109,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           {project.technologies.map((tech, index) => (
             <span 
               key={index}
-              className="inline-flex items-center text-xs px-2.5 py-1 rounded-full bg-white/60 dark:bg-gray-700/60 backdrop-blur-sm text-gray-700 dark:text-gray-300"
+              className="inline-flex items-center text-xs px-3 py-1.5 rounded-full bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 text-gray-700 dark:text-gray-300 border border-gray-200/50 dark:border-gray-600/50"
             >
               <Tag className="w-3 h-3 mr-1" />
               {tech}
@@ -156,17 +156,7 @@ const Projects: React.FC = () => {
     : projects.filter(p => p.technologies.includes(filter));
 
   return (
-    <section id="projects" className="py-20 relative overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-gray-900"></div>
-      
-      {/* Animated background patterns */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute top-10 left-10 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-        <div className="absolute top-20 right-20 w-96 h-96 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-10 left-1/3 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
-      </div>
-
+    <section id="projects" className="py-20 relative">
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
           <SectionHeading title="My Projects" subtitle="Recent Work" />
@@ -178,10 +168,10 @@ const Projects: React.FC = () => {
               <button
                 key={tech}
                 onClick={() => setFilter(tech)}
-                className={`px-4 py-2 rounded-full text-sm transition-all duration-300 backdrop-blur-sm ${
+                className={`px-5 py-2.5 rounded-full text-sm transition-all duration-300 font-medium ${
                   filter === tech
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-105'
-                    : 'bg-white/50 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-gray-700/70 hover:transform hover:scale-102'
+                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-105 border border-blue-500/50'
+                    : 'glass-card text-gray-700 dark:text-gray-300 hover:bg-gradient-to-r hover:from-gray-500/10 hover:to-gray-600/10 hover:transform hover:scale-102'
                 }`}
               >
                 {tech === 'all' ? 'All Projects' : tech}

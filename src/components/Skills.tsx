@@ -24,7 +24,7 @@ const skillCategories: SkillCategory[] = [
   {
     name: 'Technologies & Frameworks',
     skills: [
-      { name: 'Machine Learning', level: 5 },
+      { name: 'Machine Learning', level: 4.5 },
       { name: 'Deep Learning', level: 4 },
       { name: 'NLP', level: 4 },
       { name: 'Computer Vision', level: 4 },
@@ -46,16 +46,18 @@ const skillCategories: SkillCategory[] = [
 ];
 
 const SkillBar: React.FC<{ name: string; level: number }> = ({ name, level }) => {
+  const percentage = level === 5 ? 95 : level === 4.5 ? 90 : level * 20;
+  
   return (
-    <div className="mb-4">
-      <div className="flex justify-between mb-1">
-        <span className="text-gray-700 dark:text-gray-300">{name}</span>
-        <span className="text-blue-600 dark:text-blue-400 font-medium">{level === 5 ? 95 : level * 20}%</span>
+    <div className="mb-5">
+      <div className="flex justify-between mb-2">
+        <span className="text-gray-700 dark:text-gray-300 font-medium">{name}</span>
+        <span className="text-blue-600 dark:text-blue-400 font-semibold">{percentage}%</span>
       </div>
-      <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+      <div className="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
         <div 
-          className="h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full skill-bar"
-          style={{ width: `${level === 5 ? 95 : level * 20}%` }}
+          className="h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full skill-bar shadow-sm"
+          style={{ width: `${percentage}%` }}
         ></div>
       </div>
     </div>
@@ -64,17 +66,7 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({ name, level }) =>
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-20 relative overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pink-50 to-blue-50 dark:from-gray-900 dark:to-blue-900/30"></div>
-      
-      {/* Animated background patterns */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute top-20 right-10 w-80 h-80 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
-      </div>
-
+    <section id="skills" className="py-20 relative">
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
           <SectionHeading title="Skills & Expertise" subtitle="What I Can Do" />
@@ -83,8 +75,8 @@ const Skills: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {skillCategories.map((category, idx) => (
             <ScrollReveal key={idx} delay={200 * (idx + 1)}>
-              <div className="card p-6">
-                <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <div className="glass-card p-8">
+                <h3 className="text-xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   {category.name}
                 </h3>
                 
