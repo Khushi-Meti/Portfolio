@@ -45,17 +45,7 @@ const educationData: EducationItem[] = [
 
 const Education: React.FC = () => {
   return (
-    <section id="education" className="py-20 relative overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-pink-50 dark:from-gray-900 dark:to-purple-900/30"></div>
-      
-      {/* Animated background patterns */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute top-20 left-1/4 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-        <div className="absolute bottom-20 right-1/4 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/2 right-10 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
-      </div>
-
+    <section id="education" className="py-20 relative">
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
           <SectionHeading title="Education" subtitle="Academic Journey" />
@@ -76,7 +66,7 @@ const Education: React.FC = () => {
                         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1 md:mb-0">
                           {edu.degree}
                         </h3>
-                        <span className="text-sm font-medium px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 rounded-full">
+                        <span className="text-sm font-medium px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-800/60 dark:to-purple-800/60 text-blue-700 dark:text-blue-300 rounded-full">
                           {edu.year}
                         </span>
                       </div>

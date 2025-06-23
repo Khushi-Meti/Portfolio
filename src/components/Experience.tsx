@@ -46,17 +46,7 @@ const Experience: React.FC = () => {
   const selectedExperience = experiences.find(exp => exp.id === activeExperience) || experiences[0];
 
   return (
-    <section id="experience" className="py-20 relative overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-blue-900/30 dark:to-gray-900"></div>
-      
-      {/* Animated background patterns */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute top-10 right-20 w-80 h-80 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-10 left-20 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
-      </div>
-
+    <section id="experience" className="py-20 relative">
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
           <SectionHeading title="Work Experience" subtitle="My Professional Journey" />
@@ -72,8 +62,8 @@ const Experience: React.FC = () => {
                     key={exp.id}
                     className={`py-3 px-4 text-left rounded-lg transition-all duration-300 whitespace-nowrap md:whitespace-normal backdrop-blur-sm ${
                       activeExperience === exp.id
-                        ? 'bg-white/80 dark:bg-gray-800/80 text-blue-700 dark:text-blue-300 font-medium shadow-lg transform scale-105'
-                        : 'bg-white/40 dark:bg-gray-800/40 hover:bg-white/60 dark:hover:bg-gray-800/60 text-gray-700 dark:text-gray-300 hover:transform hover:scale-102'
+                        ? 'bg-white/90 dark:bg-gray-700/90 text-blue-700 dark:text-blue-300 font-medium shadow-lg transform scale-105'
+                        : 'bg-white/60 dark:bg-gray-700/60 hover:bg-white/80 dark:hover:bg-gray-700/80 text-gray-700 dark:text-gray-300 hover:transform hover:scale-102'
                     }`}
                     onClick={() => setActiveExperience(exp.id)}
                   >
@@ -91,7 +81,7 @@ const Experience: React.FC = () => {
                     {selectedExperience.title}
                   </h3>
                   {selectedExperience.current && (
-                    <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-sm font-medium rounded-full">
+                    <span className="px-3 py-1 bg-green-100 dark:bg-green-800/50 text-green-700 dark:text-green-400 text-sm font-medium rounded-full">
                       Current
                     </span>
                   )}

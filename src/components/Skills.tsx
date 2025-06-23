@@ -52,7 +52,7 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({ name, level }) =>
         <span className="text-gray-700 dark:text-gray-300">{name}</span>
         <span className="text-blue-600 dark:text-blue-400 font-medium">{level === 5 ? 95 : level * 20}%</span>
       </div>
-      <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+      <div className="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden">
         <div 
           className="h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full skill-bar"
           style={{ width: `${level === 5 ? 95 : level * 20}%` }}
@@ -64,17 +64,7 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({ name, level }) =>
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-20 relative overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pink-50 to-blue-50 dark:from-gray-900 dark:to-blue-900/30"></div>
-      
-      {/* Animated background patterns */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute top-20 right-10 w-80 h-80 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
-      </div>
-
+    <section id="skills" className="py-20 relative">
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
           <SectionHeading title="Skills & Expertise" subtitle="What I Can Do" />
