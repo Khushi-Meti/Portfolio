@@ -49,10 +49,10 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({ name, level }) =>
   return (
     <div className="mb-4">
       <div className="flex justify-between mb-1">
-        <span className="text-gray-700 dark:text-gray-300">{name}</span>
+        <span className="text-gray-700 dark:text-gray-200">{name}</span>
         <span className="text-blue-600 dark:text-blue-400 font-medium">{level === 5 ? 95 : level * 20}%</span>
       </div>
-      <div className="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden">
+      <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
         <div 
           className="h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full skill-bar"
           style={{ width: `${level === 5 ? 95 : level * 20}%` }}
@@ -73,7 +73,7 @@ const Skills: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {skillCategories.map((category, idx) => (
             <ScrollReveal key={idx} delay={200 * (idx + 1)}>
-              <div className="card p-6">
+              <div className="card-shiny p-6">
                 <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   {category.name}
                 </h3>

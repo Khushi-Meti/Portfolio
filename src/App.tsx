@@ -14,10 +14,10 @@ function App() {
   return (
     <ThemeProvider>
       {/* Fixed background that stays in place */}
-      <div className="fixed inset-0 z-0 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-blue-900/30"></div>
+      <div className="fixed inset-0 z-0 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-950 dark:to-slate-900"></div>
 
       {/* Fixed animated blurred blobs */}
-      <div className="fixed inset-0 z-0 overflow-hidden opacity-10 pointer-events-none">
+      <div className="fixed inset-0 z-0 overflow-hidden opacity-10 dark:opacity-5 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
         <div className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
         <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>

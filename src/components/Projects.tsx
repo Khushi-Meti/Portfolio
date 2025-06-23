@@ -90,18 +90,18 @@ const projects: Project[] = [
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
-    <div className="card group">
+    <div className="card-shiny group">
       <div className="p-6">
         <div className="flex justify-between items-start mb-4">
           <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
             {project.title}
           </h3>
-          <span className="text-sm text-blue-600 dark:text-blue-400 font-medium px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-800/60 dark:to-purple-800/60 rounded-full">
+          <span className="text-sm text-blue-600 dark:text-blue-400 font-medium px-3 py-1 glass-effect rounded-full">
             {project.date}
           </span>
         </div>
         
-        <p className="text-gray-700 dark:text-gray-300 mb-6 line-clamp-3">
+        <p className="text-gray-700 dark:text-gray-200 mb-6 line-clamp-3">
           {project.description}
         </p>
         
@@ -109,7 +109,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           {project.technologies.map((tech, index) => (
             <span 
               key={index}
-              className="inline-flex items-center text-xs px-2.5 py-1 rounded-full bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm text-gray-700 dark:text-gray-300"
+              className="inline-flex items-center text-xs px-2.5 py-1 rounded-full bg-white/80 dark:bg-gray-600/80 backdrop-blur-sm text-gray-700 dark:text-gray-200 border border-white/30 dark:border-white/20"
             >
               <Tag className="w-3 h-3 mr-1" />
               {tech}
@@ -123,7 +123,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
               href={project.repoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+              className="p-2 text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
               aria-label="View source code"
             >
               <Github className="h-5 w-5" />
@@ -134,7 +134,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
               href={project.demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+              className="p-2 text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
               aria-label="View live demo"
             >
               <ExternalLink className="h-5 w-5" />
@@ -168,10 +168,10 @@ const Projects: React.FC = () => {
               <button
                 key={tech}
                 onClick={() => setFilter(tech)}
-                className={`px-4 py-2 rounded-full text-sm transition-all duration-300 backdrop-blur-sm ${
+                className={`px-4 py-2 rounded-full text-sm transition-all duration-300 backdrop-blur-sm border ${
                   filter === tech
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-105'
-                    : 'bg-white/70 dark:bg-gray-700/70 text-gray-700 dark:text-gray-300 hover:bg-white/90 dark:hover:bg-gray-700/90 hover:transform hover:scale-102'
+                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-105 border-white/30'
+                    : 'glass-effect text-gray-700 dark:text-gray-200 hover:transform hover:scale-102 border-white/30 dark:border-white/20'
                 }`}
               >
                 {tech === 'all' ? 'All Projects' : tech}

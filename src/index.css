@@ -32,11 +32,36 @@
   }
   
   .btn-secondary {
-    @apply bg-white/80 dark:bg-gray-700/80 hover:bg-white/90 dark:hover:bg-gray-700/90 text-gray-900 dark:text-gray-100 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    @apply bg-white/80 dark:bg-gray-600/80 hover:bg-white/90 dark:hover:bg-gray-600/90 text-gray-900 dark:text-gray-100 transform hover:scale-105 shadow-lg hover:shadow-xl border border-white/30 dark:border-white/20;
   }
 
   .card {
-    @apply bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] border border-white/20 dark:border-gray-600/20;
+    @apply bg-white/90 dark:bg-gray-600/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] border border-white/30 dark:border-white/20;
+  }
+
+  /* Shiny border effect for dark mode */
+  .card-shiny {
+    @apply bg-white/90 dark:bg-gray-600/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] border border-white/30 dark:border-white/30;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .dark .card-shiny {
+    box-shadow: 
+      0 10px 25px -5px rgba(0, 0, 0, 0.3), 
+      0 4px 6px -2px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/80 dark:bg-gray-600/80 border border-white/30 dark:border-white/20;
+  }
+
+  .dark .glass-effect {
+    background: rgba(75, 85, 99, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+      0 8px 32px 0 rgba(31, 38, 135, 0.37),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -126,8 +151,14 @@
 }
 
 /* Enhanced card hover effects */
-.card:hover {
+.card:hover, .card-shiny:hover {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.dark .card:hover, .dark .card-shiny:hover {
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 /* Smooth transitions for all interactive elements */
@@ -145,6 +176,6 @@
 }
 
 .dark .glass {
-  background: rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(75, 85, 99, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }

@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6 inline-block">
-            <span className="inline-block py-2 px-4 rounded-full bg-blue-100 dark:bg-blue-800/60 text-blue-700 dark:text-blue-300 text-sm font-medium backdrop-blur-sm">
+            <span className="inline-block py-2 px-4 rounded-full bg-blue-100 dark:bg-gray-600/80 text-blue-700 dark:text-blue-300 text-sm font-medium backdrop-blur-sm border border-white/30 dark:border-white/20">
               Full Stack Developer & Machine Learning Engineer
             </span>
           </div>
@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
             Hi, I'm Khushi S M
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-12 leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-200 mb-12 leading-relaxed">
             A passionate computer science graduate specializing in data science, machine learning, and full-stack development. Building intelligent solutions to solve real-world problems.
           </p>
           
@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
             </a>
             <a 
               href="#projects" 
-              className="px-8 py-4 bg-white/80 dark:bg-gray-700/80 text-gray-900 dark:text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl backdrop-blur-sm hover:bg-white/90 dark:hover:bg-gray-700/90"
+              className="px-8 py-4 glass-effect text-gray-900 dark:text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               View My Work
             </a>
@@ -39,8 +39,8 @@ const Hero: React.FC = () => {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-sm text-gray-600 dark:text-gray-400 mb-2">Scroll Down</span>
-        <ChevronDown className="h-5 w-5 text-gray-600 dark:text-gray-400" />
+        <span className="text-sm text-gray-600 dark:text-gray-300 mb-2">Scroll Down</span>
+        <ChevronDown className="h-5 w-5 text-gray-600 dark:text-gray-300" />
       </div>
     </section>
   );

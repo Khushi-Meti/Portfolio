@@ -55,7 +55,7 @@ const Education: React.FC = () => {
           <div className="space-y-8">
             {educationData.map((edu, index) => (
               <ScrollReveal key={edu.id} delay={200 * (index + 1)}>
-                <div className="card p-6 hover:shadow-2xl transition-all duration-300">
+                <div className="card-shiny p-6 hover:shadow-2xl transition-all duration-300">
                   <div className="flex items-start space-x-4">
                     <div className={`p-3 rounded-full bg-gradient-to-r ${edu.color} text-white shadow-lg`}>
                       {edu.icon}
@@ -66,17 +66,17 @@ const Education: React.FC = () => {
                         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1 md:mb-0">
                           {edu.degree}
                         </h3>
-                        <span className="text-sm font-medium px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-800/60 dark:to-purple-800/60 text-blue-700 dark:text-blue-300 rounded-full">
+                        <span className="text-sm font-medium px-3 py-1 glass-effect text-blue-700 dark:text-blue-300 rounded-full">
                           {edu.year}
                         </span>
                       </div>
                       
-                      <p className="text-gray-600 dark:text-gray-400 mb-2 font-medium">
+                      <p className="text-gray-600 dark:text-gray-300 mb-2 font-medium">
                         {edu.institution}
                       </p>
                       
                       <div className="flex items-center">
-                        <span className="text-sm text-gray-500 dark:text-gray-500 mr-2">Grade:</span>
+                        <span className="text-sm text-gray-500 dark:text-gray-400 mr-2">Grade:</span>
                         <span className={`font-bold text-lg bg-gradient-to-r ${edu.color} bg-clip-text text-transparent`}>
                           {edu.grade}
                         </span>

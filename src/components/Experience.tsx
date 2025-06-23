@@ -60,10 +60,10 @@ const Experience: React.FC = () => {
                 {experiences.map((exp) => (
                   <button
                     key={exp.id}
-                    className={`py-3 px-4 text-left rounded-lg transition-all duration-300 whitespace-nowrap md:whitespace-normal backdrop-blur-sm ${
+                    className={`py-3 px-4 text-left rounded-lg transition-all duration-300 whitespace-nowrap md:whitespace-normal backdrop-blur-sm border ${
                       activeExperience === exp.id
-                        ? 'bg-white/90 dark:bg-gray-700/90 text-blue-700 dark:text-blue-300 font-medium shadow-lg transform scale-105'
-                        : 'bg-white/60 dark:bg-gray-700/60 hover:bg-white/80 dark:hover:bg-gray-700/80 text-gray-700 dark:text-gray-300 hover:transform hover:scale-102'
+                        ? 'glass-effect text-blue-700 dark:text-blue-300 font-medium shadow-lg transform scale-105 border-white/40 dark:border-white/30'
+                        : 'bg-white/60 dark:bg-gray-600/60 hover:bg-white/80 dark:hover:bg-gray-600/80 text-gray-700 dark:text-gray-200 hover:transform hover:scale-102 border-white/30 dark:border-white/20'
                     }`}
                     onClick={() => setActiveExperience(exp.id)}
                   >
@@ -74,31 +74,31 @@ const Experience: React.FC = () => {
             </div>
             
             {/* Experience details */}
-            <div className="col-span-1 md:col-span-2 card p-6">
+            <div className="col-span-1 md:col-span-2 card-shiny p-6">
               <div className="mb-4">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                     {selectedExperience.title}
                   </h3>
                   {selectedExperience.current && (
-                    <span className="px-3 py-1 bg-green-100 dark:bg-green-800/50 text-green-700 dark:text-green-400 text-sm font-medium rounded-full">
+                    <span className="px-3 py-1 bg-green-100 dark:bg-green-700/60 text-green-700 dark:text-green-300 text-sm font-medium rounded-full border border-white/30 dark:border-white/20">
                       Current
                     </span>
                   )}
                 </div>
-                <div className="flex flex-wrap items-center mt-1 text-gray-600 dark:text-gray-400">
+                <div className="flex flex-wrap items-center mt-1 text-gray-600 dark:text-gray-300">
                   <span className="font-medium text-blue-600 dark:text-blue-400">{selectedExperience.company}</span>
                   <span className="mx-2">•</span>
                   <span>{selectedExperience.location}</span>
                 </div>
-                <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">{selectedExperience.date}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{selectedExperience.date}</p>
               </div>
               
               <ul className="space-y-3 mt-6">
                 {selectedExperience.description.map((item, index) => (
                   <li key={index} className="flex">
                     <ChevronRight className="h-5 w-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
-                    <span className="ml-2 text-gray-700 dark:text-gray-300">{item}</span>
+                    <span className="ml-2 text-gray-700 dark:text-gray-200">{item}</span>
                   </li>
                 ))}
               </ul>

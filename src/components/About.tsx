@@ -13,11 +13,11 @@ const About: React.FC = () => {
         <div className="max-w-4xl mx-auto mt-12">
           {/* Technical Section */}
           <ScrollReveal delay={200}>
-            <div className="card p-8">
+            <div className="card-shiny p-8">
               <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Technical Journey
               </h3>
-              <div className="space-y-4 text-gray-700 dark:text-gray-300">
+              <div className="space-y-4 text-gray-700 dark:text-gray-200">
                 <p>
                   I'm a Computer Science graduate with a specialization in Data Science from Presidency University, Bangalore, where I maintained a CGPA of 8.10. My academic journey has equipped me with a strong foundation in both theoretical concepts and practical applications.
                 </p>
@@ -34,7 +34,7 @@ const About: React.FC = () => {
 
         {/* Quote */}
         <ScrollReveal delay={400}>
-          <div className="max-w-3xl mx-auto mt-12 p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-800/40 dark:to-purple-800/40 rounded-lg border-l-4 border-blue-500">
+          <div className="max-w-3xl mx-auto mt-12 p-6 glass-effect rounded-lg border-l-4 border-blue-500">
             <p className="italic text-center text-gray-800 dark:text-gray-200 text-lg">
               "Technology is poetry written in logic — a way to solve what once seemed unsolvable, and connect what once felt distant. It is both tool and torch."
             </p>
