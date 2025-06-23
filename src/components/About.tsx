@@ -4,17 +4,7 @@ import ScrollReveal from '../utils/ScrollReveal';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-20 relative overflow-hidden">
-      {/* Gradient background matching hero */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-blue-900/30"></div>
-
-      {/* Animated background patterns */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
-      </div>
-
+    <section id="about" className="py-20 relative">
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
           <SectionHeading title="About Me" subtitle="My Background" />
@@ -44,7 +34,7 @@ const About: React.FC = () => {
 
         {/* Quote */}
         <ScrollReveal delay={400}>
-          <div className="max-w-3xl mx-auto mt-12 p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg border-l-4 border-blue-500">
+          <div className="max-w-3xl mx-auto mt-12 p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-800/40 dark:to-purple-800/40 rounded-lg border-l-4 border-blue-500">
             <p className="italic text-center text-gray-800 dark:text-gray-200 text-lg">
               "Technology is poetry written in logic — a way to solve what once seemed unsolvable, and connect what once felt distant. It is both tool and torch."
             </p>
