@@ -25,19 +25,19 @@ const educationData: EducationItem[] = [
   },
   {
     id: 'puc',
-    degree: '12th Standard - Karnataka PUC Board',
+    degree: 'Senior Secondary – Karnataka PUC Board',
     institution: 'SVVN PU College',
     grade: '84.83%',
-    year: '2019 - 2021',
+    year: '2018 - 2020',
     icon: <Award className="h-6 w-6" />,
     color: 'from-purple-600 to-pink-600'
   },
   {
     id: 'icse',
-    degree: '10th Standard - ICSE Board',
+    degree: 'Secondary Education – ICSE Board',
     institution: 'Lorven Public School',
     grade: '87.5%',
-    year: '2019',
+    year: '2018',
     icon: <BookOpen className="h-6 w-6" />,
     color: 'from-pink-600 to-blue-600'
   }
