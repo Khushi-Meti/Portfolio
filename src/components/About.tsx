@@ -53,7 +53,7 @@ const About: React.FC = () => {
               LinkedIn Profile
             </a>
             <a 
-              href="https://drive.google.com/file/d/1HXEaZohGqsQ6ILFI8MDB-IICuwL1Rphk/view?usp=sharing" 
+              href="https://drive.google.com/file/d/1SR1-qem0VtqPhWeG89jm84LT6jLk3Q-t/view?usp=sharing" 
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-secondary shadow-lg"
