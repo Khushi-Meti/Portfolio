@@ -19,8 +19,7 @@ const experiences: ExperienceItem[] = [
     title: 'Machine Learning Intern',
     company: 'Newspace Research and Technologies Pvt Ltd',
     location: 'Bangalore, India',
-    date: 'Jan 2025 - Present',
-    current: true,
+    date: 'Jan 2025 - July 2025',
     description: [
       'Developed a reinforcement learning-based drone swarm using PPO for hovering, obstacle avoidance, and target-reaching.',
       'Designed reward functions, termination conditions, and feedback systems to improve drone performance. Achieved 93.33% success rate with zero collisions and minimal oscillations.',
