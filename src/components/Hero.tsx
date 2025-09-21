@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-200 mb-12 leading-relaxed">
-            A passionate computer science graduate specializing in data science, machine learning, and full-stack development. Building intelligent solutions to solve real-world problems.
+            A passionate Computer Science graduate with expertise in Data Science, Machine Learning, and Full-Stack Development. Currently working as a Software Engineer at Capgemini, building innovative solutions and contributing to cutting-edge technology projects.
           </p>
           
           <div className="flex flex-wrap justify-center gap-6">

@@ -19,13 +19,13 @@ const About: React.FC = () => {
               </h3>
               <div className="space-y-4 text-gray-700 dark:text-gray-200">
                 <p>
-                  I'm a Computer Science graduate with a specialization in Data Science from Presidency University, Bangalore, where I maintained a CGPA of 8.10. My academic journey has equipped me with a strong foundation in both theoretical concepts and practical applications.
+                  I'm a Computer Science graduate with a specialization in Data Science from Presidency University, Bangalore, where I achieved a CGPA of 8.10. My academic journey has equipped me with a strong foundation in both theoretical concepts and practical applications.
                 </p>
                 <p>
-                  Currently working as a Machine Learning Intern at Newspace Research and Technologies Pvt Ltd, I'm developing reinforcement learning solutions for drone swarms, achieving impressive results with a 93.33% success rate and zero collisions.
+                  Currently working as a Software Engineer at Capgemini, I contribute to innovative technology solutions and software development projects. I have also gained valuable experience as a Machine Learning Intern at Newspace Research and Technologies, where I developed reinforcement learning solutions for drone swarms.
                 </p>
                 <p>
-                  My technical skill set spans multiple domains including Machine Learning, Deep Learning, Natural Language Processing, Computer Vision, and Full Stack Development. I'm proficient in Python, SQL, Java, C, and web technologies.
+                  My technical expertise spans Machine Learning, Deep Learning, Natural Language Processing, Computer Vision, and Full-Stack Development. I'm proficient in Python, Java, SQL, C, and modern web technologies, with hands-on experience in building scalable applications and intelligent systems.
                 </p>
               </div>
             </div>

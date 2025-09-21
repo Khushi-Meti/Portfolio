@@ -15,6 +15,19 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
+    id: 'capgemini',
+    title: 'Software Engineer',
+    company: 'Capgemini',
+    location: 'India',
+    date: 'Aug 2024 - Present',
+    current: true,
+    description: [
+      'Working as a Software Engineer contributing to innovative technology solutions and software development projects.',
+      'Collaborating with cross-functional teams to deliver high-quality software applications and systems.',
+      'Applying technical expertise in software development lifecycle and modern development practices.'
+    ]
+  },
+  {
     id: 'newspace',
     title: 'Machine Learning Intern',
     company: 'Newspace Research and Technologies Pvt Ltd',
