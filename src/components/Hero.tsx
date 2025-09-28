@@ -42,12 +42,13 @@ const Hero: React.FC = () => {
             {/* Profile Image */}
             <div className="flex justify-center lg:justify-end order-1 lg:order-2">
               <div className="relative">
-                <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl ring-4 ring-white/20 dark:ring-white/10">
+                <div className="w-80 h-80 md:w-96 md:h-96 overflow-hidden shadow-2xl ring-4 ring-white/20 dark:ring-white/10 rounded-2xl">
                   <img 
                     src="/portfolio pic copy.jpg" 
                     alt="Khushi S M - Software Engineer" 
-                    className="w-full h-full object-contain object-center bg-white dark:bg-gray-900"
+                    className="w-full h-full object-cover object-center"
                     />
+
 
                 </div>
                 {/* Decorative elements */}
