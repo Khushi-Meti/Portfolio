@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
                   <img 
                     src="/portfolio pic copy.jpg" 
                     alt="Khushi S M - Software Engineer" 
-                    className="w-auto h-auto max-w-full max-h-[500px] object-contain"
+                    className="w-auto h-auto max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[400px] object-contain"
                     />
                 </div>
                 {/* Decorative elements */}
