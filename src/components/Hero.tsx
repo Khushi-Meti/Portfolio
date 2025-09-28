@@ -46,8 +46,9 @@ const Hero: React.FC = () => {
                   <img 
                     src="/portfolio pic copy.jpg" 
                     alt="Khushi S M - Software Engineer" 
-                    className="w-full h-full object-cover object-center"
-                  />
+                    className="w-full h-full object-contain object-center bg-white dark:bg-gray-900"
+                    />
+
                 </div>
                 {/* Decorative elements */}
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-20 animate-pulse"></div>
