@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
               <div className="relative">
                 <div className="relative inline-block overflow-hidden shadow-2xl ring-4 ring-white/20 dark:ring-white/10 rounded-2xl">
                   <img 
-                    src="/portfolio pic copy.jpg" 
+                    src="/profile pic.jpg" 
                     alt="Khushi S M - Software Engineer" 
                     className="w-auto h-auto max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[400px] object-contain"
                     />
