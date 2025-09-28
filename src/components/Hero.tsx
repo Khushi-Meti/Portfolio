@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
               </h1>
               
               <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 mb-8 leading-relaxed">
-                A passionate Software Engineer with hands-on experience in Java full-stack development and Machine Learning. Currently working at Capgemini, specializing in Backend Java-Spring Development and building innovative technology solutions.
+                Passionate Software Engineer specializing in Java and Spring Boot, crafting scalable, secure, and high-performance applications with clean code and modern architecture.
               </p>
               
               <div className="flex flex-wrap justify-center lg:justify-start gap-4">
